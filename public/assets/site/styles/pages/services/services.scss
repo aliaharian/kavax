@@ -1,0 +1,238 @@
+@import "../../_sass/mixins";
+@import "../../_sass/BaseColor";
+
+/* Services Section */
+.services-section {
+    margin-bottom: 80px;
+
+    &.services-main {
+        margin-bottom: 95px;
+
+        .service-content {
+            margin-bottom: 90px;
+
+            .heading {
+                margin-bottom: 10px;
+            }
+
+            .content-text {
+                p {
+                    line-height: 28px;
+                    margin-bottom: 20px;
+
+                    &:first-child {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+
+        .technology {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: -350px;
+                bottom: -100px;
+                width: 100%;
+                background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 63%, rgba(255, 255, 255, 0) 98%);
+                background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 63%, rgba(255, 255, 255, 0) 98%);
+                background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 63%, rgba(255, 255, 255, 0) 98%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99ffffff', endColorstr='#00ffffff', GradientType=1);
+                opacity: .1;
+                pointer-events: none;
+            }
+
+            .heading {
+                margin-bottom: 65px;
+            }
+        }
+    }
+
+    .services-include {
+        margin-bottom: 15px;
+
+        .heading {
+            color: $BaseColor;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 4.22px;
+            margin-bottom: 45px;
+        }
+
+        .services-list {
+            .item-inner {
+                display: inline-block;
+                margin-bottom: 45px;
+
+                &:hover {
+                    .icon {
+                        animation: icon-pulse .5s infinite alternate linear;
+                    }
+                }
+
+
+                .icon {
+                    display: inline-block;
+                    width: 70px;
+                    height: 70px;
+                    line-height: 70px;
+                    margin-bottom: 15px;
+                    transform: scale(1);
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+
+                @keyframes icon-pulse {
+                    0% {
+                        transform: scale(1);
+                    }
+                    100% {
+                        transform: scale(.9);
+                    }
+                    100% {
+                        transform: scale(1.1);
+                    }
+                }
+
+                .service-name {
+                    display: inline-block;
+                    width: 100%;
+                    color: #d1d1d1;
+                    font-size: 18px;
+                    font-weight: 500;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+
+    .service-content {
+        padding-left: 40px;
+
+        .heading {
+            color: #e6e6e6;
+            font-size: 35px;
+            font-weight: 900;
+            margin-bottom: 40px;
+        }
+
+        .content-text {
+            color: #d1d1d1;
+            font-size: 17px;
+            line-height: 32px;
+            font-weight: 500;
+
+            p {
+                margin-bottom: 35px;
+
+                &:first-child {
+                    font-size: 20px;
+                    line-height: 40px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Subset Section */
+.subset-services {
+    position: relative;
+    padding: 100px 0;
+    background: no-repeat center/cover;
+    margin-bottom: 55px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        background: -moz-linear-gradient(top, rgba(32, 32, 32, 1) 0%, rgba(32, 32, 32, 0) 100%);
+        background: -webkit-linear-gradient(top, rgba(32, 32, 32, 1) 0%, rgba(32, 32, 32, 0) 100%);
+        background: linear-gradient(to bottom, rgba(32, 32, 32, 1) 0%, rgba(32, 32, 32, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#202020', endColorstr='#00202020', GradientType=0);
+        right: 0;
+        top: 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        background: -moz-linear-gradient(top, rgba(32, 32, 32, 0) 0%, rgba(32, 32, 32, 1) 100%);
+        background: -webkit-linear-gradient(top, rgba(32, 32, 32, 0) 0%, rgba(32, 32, 32, 1) 100%);
+        background: linear-gradient(to bottom, rgba(32, 32, 32, 0) 0%, rgba(32, 32, 32, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00202020', endColorstr='#202020', GradientType=0);
+        right: 0;
+        bottom: 0;
+    }
+
+    .subset-items {
+        .item {
+            padding: 0 30px;
+
+
+            .item-inner {
+                display: inline-block;
+                width: 100%;
+                padding: 45px 20px;
+                position: relative;
+                transition: .3s;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    transition: .3s;
+                    border: 2px solid #707070;
+                }
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.07);
+
+                    &:before {
+                        right: -5px;
+                        top: -5px;
+                        bottom: -5px;
+                        left: -5px;
+                        border-color: #808080;
+                    }
+                }
+
+                .icon {
+                    display: inline-block;
+                    width: 100%;
+                    margin-bottom: 35px;
+                    max-width: 70px;
+                    min-height: 76px;
+
+                    img {
+                        filter: contrast(0) brightness(10);
+                        max-width: 100%;
+                    }
+                }
+
+                .name {
+                    display: inline-block;
+                    width: 100%;
+                    color: #e6e6e6;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
